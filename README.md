@@ -1,7 +1,9 @@
 Mailin SMTP Library (http://mysmtp.mailin.fr/)
+
 Version 1.0
-(c) 2012 Mailin
-===============
+
+
+ ===============
 
 This library can be used in your PHP script to send the emails using MAILIN-SMTP Services. 
 
