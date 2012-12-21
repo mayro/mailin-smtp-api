@@ -77,9 +77,12 @@ addAttachment(array("path/filename1.txt","path/filename2.txt"))
 Step 4: Now call the send function using the Mailin object:
 
 <?php
+
 $res = $mailin->send();
+
 /**
 The return format is JSON.
+
 
 Successful email sent message will be returned as:
 {'result' => true, 'message' => 'Email sent successfully.'}
