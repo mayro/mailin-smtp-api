@@ -2,6 +2,7 @@ Mailin SMTP Library (http://mysmtp.mailin.fr/)
 
 Version 1.0
 
+(c) 2012 Mailin
 
  ===============
 
