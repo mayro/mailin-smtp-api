@@ -1,30 +1,37 @@
-Mailin SMTP Library (http://mysmtp.mailin.fr/)
-
-Version 1.0
-
-(c) 2012 Mailin
-
- ===============
+# Mailin SMTP Library 1.0 #
+http://mysmtp.mailin.fr
 
 This library can be used in your PHP script to send the emails using MAILIN-SMTP Services. 
 
+**(c) 2013 Mailin**
 
+<hr>
 
-How To Install The Mailin SMTP Library
+# How To Install The Mailin SMTP Library #
 
-Step 1: Download the Mailin SMTP Library “Mailin.php” from https://github.com/DTSL/mailin-smtp-api.git
+## Step 1: ##
+Download the Mailin SMTP Library “Mailin.php” from 
+<code>https://github.com/DTSL/mailin-smtp-api.git</code>
 
-Step 2: Include the “Mailin.php” file that you have downloaded.
+## Step 2: ##
+```php
+Include the "Mailin.php" file that you have downloaded.
 <?php
 include 'path/to/mailin-api/Mailin.php';
 ?>
+```
 
-Step 3: Initialized the Mailin object with your Mailin SMTP credentials. Credentials can be found at http://mysmtp.mailin.fr/parameters
+## Step 3: ##
+Initialized the Mailin object with your Mailin SMTP credentials. Credentials can be found at http://mysmtp.mailin.fr/parameters
+```php
 <?php
 $mailin = new Mailin('username', 'password');
 ?>
+```
 
-Step 4: With the help of Mailin object create your email message: 
+## Step 4: ##
+With the help of Mailin object create your email message: 
+```php
 <?php
 $mailin->
   addTo('foo@bar.com', 'Foo')-> 
@@ -73,9 +80,11 @@ addAttachment(array("path/filename1.txt","path/filename2.txt"))
 
 */
 ?>
+```
 
-Step 4: Now call the send function using the Mailin object:
-
+## Step 5: ##
+Now call the send function using the Mailin object:
+```php
 <?php
 
 $res = $mailin->send();
@@ -91,4 +100,21 @@ In case of unsuccessful email sent, the result will be false with the appropriat
 
 */
 ?>
+```
  
+## Erro Codes ##
+Below is a list of common Mailin SMTP error codes and their meanings.
+
+```php
+Error Code: 421
+Error Description: Unable to send email. Exception message was:  Hourly Quota Exceeded.
+
+Error Code: 902
+Error Description: Unable to send email. Exception message was:  Account Terminated.
+
+Error Code: 902
+Error Description: Unable to send email. Exception message was:  Attachment data too large. Maximum attachment limit is 3 MB.
+
+Error Code: 0
+Error Description: Unable to send email. Exception message was:  No body specified.
+```
