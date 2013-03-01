@@ -14,15 +14,15 @@ Download the Mailin SMTP Library “Mailin.php” from
 <code>https://github.com/DTSL/mailin-smtp-api.git</code>
 
 ## Step 2: ##
-```php
 Include the "Mailin.php" file that you have downloaded.
+```php
 <?php
 include 'path/to/mailin-api/Mailin.php';
 ?>
 ```
 
 ## Step 3: ##
-Initialized the Mailin object with your Mailin SMTP credentials. Credentials can be found at http://mysmtp.mailin.fr/parameters
+Initialized the Mailin object with your Mailin SMTP credentials. Credentials can be found at <code>http://mysmtp.mailin.fr/parameters</code>
 ```php
 <?php
 $mailin = new Mailin('username', 'password');
