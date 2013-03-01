@@ -102,7 +102,7 @@ In case of unsuccessful email sent, the result will be false with the appropriat
 ?>
 ```
  
-## Erro Codes ##
+## Error Codes ##
 Below is a list of common Mailin SMTP error codes and their meanings.
 
 ```php
