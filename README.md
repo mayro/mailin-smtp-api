@@ -109,12 +109,12 @@ Below is a list of common Mailin SMTP error codes and their meanings.
 Error Code: 421
 Error Description: Unable to send email. Exception message was:  Hourly Quota Exceeded.
 
+Error Code: 550
+Error Description: The size of your file should not be greater than 10 Mb.
+
 Error Code: 902
 Error Description: Unable to send email. Exception message was:  Account Terminated.
 
-Error Code: 902
-Error Description: Unable to send email. Exception message was:  Attachment data too large. Maximum attachment limit is 3 MB.
-
-Error Code: 0
-Error Description: Unable to send email. Exception message was:  No body specified.
+Error Code: 903
+Error Description: Unable to send email. Exception message was: The parameters you passed are not well formated. Please refer to https://github.com/DTSL/mailin-smtp-api or contact us at contact at mailinblue.com.
 ```
