@@ -64,6 +64,12 @@ Again for multiple blind carbon copy recipients we can use array.
             'test_two@example.com' => 'example two'
 	 )
     )->
+    
+If you want to add tag in mail headers, you can add as
+    addHeader('X-Mailin-tag' , 'xyz')->
+    
+If you want to add IP in mail headers, you can add as
+    addHeader('X-Mailin-IP' , 'x.x.x.x')->    
 
 */
 
