@@ -690,10 +690,7 @@ class Mailin
    */
   protected function _preferNotToUseHeaders()
   {
-    if (count($this->getBccs()) > 0 || count($this->getCcs()) > 0)
-    {
-      return true;
-    }
+    
     if ($this->use_headers !== null && !$this->use_headers)
     {
       return true;
