@@ -863,18 +863,24 @@ class Mailin
 
     $request = $this->domain;
 	
-	$atcmnt = $this->getAttachments();
-
     // we'll append the Bcc, Cc, replyto, to, files to the url endpoint (GET)
     // so that we can still post array.
     $request.= "?" .
-	substr($this->_arrayToUrlPart($this->getBccs(), "bcc"), 1) .
-	$this->_arrayToUrlPart($this->getCcs(), "cc") .
-	$this->_arrayToUrlPartTwo($this->getReplyto(), "replyto") .
-	$this->_arrayToUrlPart($this->getTos(), "to") .
-	$this->_arrayToUrlPartThree($atcmnt, "files");
+        substr($this->_arrayToUrlPart($this->getBccs(), "bcc"), 1) .
+        $this->_arrayToUrlPart($this->getCcs(), "cc") .
+        $this->_arrayToUrlPartTwo($this->getReplyto(), "replyto") .
+        $this->_arrayToUrlPart($this->getTos(), "to");
+  
+    // Append the files seperately to prevent array error when there isn't any
+    $atcmnt = $this->getAttachments();
+    if($atcmnt)
+    {
+        $request = $request .  
+        $this->_arrayToUrlPartThree($atcmnt, "files");
+    }
+
 	  
-	$session = curl_init($request);
+    $session = curl_init($request);
     curl_setopt ($session, CURLOPT_POST, true);
     curl_setopt ($session, CURLOPT_POSTFIELDS, $data);
 
